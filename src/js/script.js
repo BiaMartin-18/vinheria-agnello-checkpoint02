@@ -90,5 +90,21 @@ function mostrarDados(nome, tipo, safra, quantidade, classificacao) {
     }
 }
 
+// EXIBIR O RESUMO FINAL 
+
+function mostrarResumo(totalCadastros, totalEstoqueBaixo, safraMaisAntiga, nomeMaisAntigo) {
+    if (totalCadastros == 0) {
+        alert("Nenhum vinho foi cadastrado");
+        return;
+    }
+
+    console.log("---------- Resumo Final ----------");
+    console.log("Total de cadastros: " + totalCadastros);
+    console.log("Vinhos com estoque baixo: " + totalEstoqueBaixo);
+    console.log("Vinho com a safra mais antiga: " + nomeMaisAntigo + " (" + safraMaisAntiga + ")");
+
+    alert("Resumo final\nCadastros: " + totalCadastros + "\nEstoque baixo: " + totalEstoqueBaixo + "\nSafra mais antiga: " + nomeMaisAntigo + " (" + safraMaisAntiga + ")")
+}
+
 
 
