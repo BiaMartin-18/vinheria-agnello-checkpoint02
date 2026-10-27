@@ -107,4 +107,51 @@ function mostrarResumo(totalCadastros, totalEstoqueBaixo, safraMaisAntiga, nomeM
 }
 
 
+// FLUXO PRINCIPAL
 
+// Inicializar os contadores e as infos da safra mais antiga
+let totalCadastros = 0;
+let totalEstoqueBaixo = 0;
+let safraMaisAntiga = 0;
+let nomeMaisAntigo = "";
+
+let continuar;
+
+do {
+    // solicitacao dos dados do vinho
+    let nome = validarTexto("Digite o nome do vinho:");
+    let tipo = validarTipo("Digite o tipo do vinho (Tinto, Branco ou Rosé):");
+    let safra = validarNumero("Digite o ano da safra:", 1900, ANO_ATUAL);
+    let quantidade = validarNumero("Digite a quantidade em estoque:", 0, 100000);
+
+    // classificacao do vinho conforme sua safra
+    let classificacao = classificarVinho(safra);
+
+    // exibe os dados do vinho cadastrado
+    mostrarDados(nome, tipo, safra, quantidade, classificacao);
+
+    // atualiza o total de cadastros
+    totalCadastros++;
+
+    // contar vinhos com estoque baixo
+    if (estoqueBaixo(quantidade)) {
+        totalEstoqueBaixo++;
+    }
+
+    if (totalCadastros === 1 || safra < safraMaisAntiga) {
+        safraMaisAntiga = safra;
+        nomeMaisAntigo = nome;
+    }
+    continuar = validarTexto("Deseja cadastrar outro vinho? (sim/não)");
+
+} while (
+    continuar.toLowerCase() === "sim" ||
+    continuar.toLowerCase() === "s"
+);
+
+mostrarResumo(
+    totalCadastros,
+    totalEstoqueBaixo,
+    safraMaisAntiga,
+    nomeMaisAntigo
+);
