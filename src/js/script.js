@@ -12,45 +12,59 @@ const LIMITE_AMADURECIDO = 10;
 function validarTexto(mensagem) {
     let entrada = prompt(mensagem);
 
-    while (entrada == null || entrada == "") {
-        alert("Entrada inválida. Digite um valor.")
+    while (entrada === null || entrada.trim() === "") {
+        alert("Entrada inválida. Digite um valor.");
         entrada = prompt(mensagem);
     }
 
-    return entrada;
+    return entrada.trim();
 }
 
 function validarNumero(mensagem, minimo, maximo) {
-    let numero = parseInt(prompt(mensagem));
+    let entrada = prompt(mensagem);
+    let numero = Number(entrada);
 
-    while (isNaN(numero) || numero < minimo || numero > maximo) {
-        alert("Digite um número entre " + minimo + " e " + maximo + ".");
-        numero = parseInt(prompt(mensagem));
+    while (
+        entrada === null ||
+        entrada.trim() === "" ||
+        !Number.isInteger(numero) ||
+        numero < minimo ||
+        numero > maximo
+    ) {
+        alert(
+            "Digite um número inteiro entre " +
+            minimo + " e " + maximo + "."
+        );
+
+        entrada = prompt(mensagem);
+        numero = Number(entrada);
     }
 
     return numero;
 }
 
 
-function validarTipo(mensagem) {
-    let tipo = validarTexto(mensagem);
-    let tipoPadronizado = "";
 
-    while (tipoPadronizado == "") {
-        if (tipo == "Tinto" || tipo == "tinto") {
-            tipoPadronizado = "Tinto";
-        } else if (tipo == "Branco" || tipo == "branco") {
-            tipoPadronizado = "Branco";
-        } else if (tipo == "Rosé" || tipo == "rosé" || tipo == "Rose" || tipo == "rose") {
-            tipoPadronizado = "Rosé";
-        } else {
-            alert("Tipo inválido. Digite Tinto, Branco ou Rosé");
-            tipo = validarTexto(mensagem);
-        }
+function validarTipo(mensagem) {
+    let tipo = validarTexto(mensagem).toLowerCase();
+
+    while (
+        tipo !== "tinto" &&
+        tipo !== "branco" &&
+        tipo !== "rose" &&
+        tipo !== "rosé"
+    ) {
+        alert("Tipo inválido. Digite Tinto, Branco ou Rosé.");
+        tipo = validarTexto(mensagem).toLowerCase();
     }
 
-    return tipoPadronizado
+    if (tipo === "rose") {
+        return "Rosé";
+    }
+
+    return tipo.charAt(0).toUpperCase() + tipo.slice(1);
 }
+
 
 // ESTOQUE BAIXO 
 
