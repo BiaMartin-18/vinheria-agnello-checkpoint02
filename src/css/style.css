@@ -1,1 +1,289 @@
-/* teste de salvamento  */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #b9c9e7;
+    color: #991e5a;
+    margin: 0;
+    line-height: 1.6;
+}
+
+a {
+    color: #efc0da;
+}
+
+.cabecalho {
+    background-color: #991e5a;
+    text-align: center;
+    padding: 20px;
+    color: #dbe586;
+}
+
+.marca {
+    color: #dbe586;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 28px;
+    margin: 0 0 10px 0;
+}
+
+.menu a {
+    color: #efc0da;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #dbe586;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-decoration: none;
+    text-decoration-color: #efc0da;
+    padding: 10px;
+}
+
+h2 {
+    border-bottom: 2px solid #efc0da;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.titulo-historia {
+    text-align: center;
+    color: #dbe586;
+    background-color: #db1374;
+}
+
+.imagem-destaque {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.imagem-destaque-inicio {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+.rodape {
+    background-color: #dbe586;
+    color: #db1374;
+    text-align: center;
+    padding: 15px;
+}
+
+.tabela-vinhos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #991e5a;
+}
+
+.tabela-vinhos caption {
+    font-weight: bold;
+    padding: 8px;
+}
+
+.tabela-vinhos th {
+    background-color: #5b1a2a;
+    color: #b9c9e7;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabela-vinhos td {
+    padding: 10px;
+    border-bottom: 1px solid #efc0da;
+}
+
+.titlecontactpage {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+}
+
+.cabecalhoindex {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 20px;
+}
+
+.cabecalhomenuindex {
+    text-decoration: none;
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.ajuda {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.familia {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.titulo-vinhos {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.descricao-historia {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.trajetoria {
+    text-align: none;
+    color: #dbe586;
+    background-color: #991e5a;
+    padding: 10px;
+}
+
+.listatrajetoria {
+    text-align: none;
+    color: #efc0da;
+}
+
+.saiba-mais {
+    text-align: center;
+    color: #dbe586;
+    background-color: #db1374;
+    padding: 20px;
+}
+
+.diferenciais {
+    text-align: center;
+    color: #dbe586;
+    background-color: #db1374;
+    padding: 20px;
+}
+
+.vinhosdiff {
+    text-align: center;
+    color: #dbe586;
+    background-color: #db1374;
+    padding: 20px;
+}
+
+.catalogo {
+    text-align: center;
+    color: #dbe586;
+    background-color: #db1374;
+    padding: 20px;
+}
+
+.titulovin {
+    text-align: center;
+    color: #dbe586;
+    background-color: #991e5a;
+}
+
+.descricao-inicio {
+    text-align: center;
+    color: #efc0da;
+    background-color: #991e5a;
+    padding: 20px;
+}
+
+.experiencia {
+    text-align: center;
+    color: #dbe586;
+    background-color: #991e5a;
+    padding: 20px;
+}
+
+.bloco-degustacao {
+    background-color: #991e5a;
+    color: #dbe586;
+    width: 100%;
+    margin: 20px 0;
+    padding: 5px 0;
+}
+
+.bloco-degustacao h2 {
+    border-bottom: none;
+    margin: 0;
+}
+
+.bloco-contato {
+    background-color: #991e5a;
+    color: #efc0da;
+    padding: 20px;
+    text-align: center;
+}
+
+.bloco-contato h2 {
+    color: #dbe586;
+    border-bottom: none;
+    margin: 0 0 20px 0;
+}
+
+.formulario {
+    width: 500px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #efc0da;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.formulario button {
+    display: block;
+    margin: 20px auto 0;
+    padding: 10px 25px;
+    background-color: #dbe586;
+    color: #991e5a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.formulario button:hover {
+    background-color: #efc0da;
+}
